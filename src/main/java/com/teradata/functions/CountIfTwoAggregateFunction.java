@@ -17,7 +17,6 @@ import com.facebook.presto.operator.aggregation.AggregationFunction;
 import com.facebook.presto.operator.aggregation.CombineFunction;
 import com.facebook.presto.operator.aggregation.InputFunction;
 import com.facebook.presto.operator.aggregation.OutputFunction;
-import com.facebook.presto.operator.aggregation.state.LongAndDoubleState;
 import com.facebook.presto.operator.aggregation.state.LongState;
 import com.facebook.presto.spi.block.BlockBuilder;
 import com.facebook.presto.spi.type.BigintType;
@@ -36,7 +35,7 @@ public class CountIfTwoAggregateFunction
     }
 
     @CombineFunction
-    public static void combine(LongState state, LongAndDoubleState otherState)
+    public static void combine(LongState state, LongState otherState)
     {
         state.setLong(state.getLong() + otherState.getLong());
     }
