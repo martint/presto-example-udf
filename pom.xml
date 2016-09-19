@@ -18,6 +18,7 @@
             <groupId>com.facebook.presto</groupId>
             <artifactId>presto-spi</artifactId>
             <version>${presto.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
@@ -25,18 +26,21 @@
             <groupId>com.facebook.presto</groupId>
             <artifactId>presto-main</artifactId>
             <version>${presto.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>io.airlift</groupId>
             <artifactId>slice</artifactId>
             <version>0.22</version>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>19.0</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- for testing -->
