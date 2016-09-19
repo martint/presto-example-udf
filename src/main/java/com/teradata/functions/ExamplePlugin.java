@@ -13,17 +13,19 @@
  */
 package com.teradata.functions;
 
+import com.facebook.presto.metadata.FunctionFactory;
 import com.facebook.presto.spi.Plugin;
 import com.google.common.collect.ImmutableList;
 
 import java.util.List;
 
-public class ExamplePlugin implements Plugin
+public class ExamplePlugin
+        implements Plugin
 {
     @Override
     public <T> List<T> getServices(Class<T> type)
     {
-        if (type == ExampleFunctionFactory.class) {
+        if (type == FunctionFactory.class) {
             return ImmutableList.of(type.cast(new ExampleFunctionFactory()));
         }
         return ImmutableList.of();
