@@ -27,6 +27,7 @@ public class ExampleFunctionFactory
     {
         return new FunctionListBuilder()
                 .scalars(ExampleFunctions.class)
+                .aggregate(CountIfTwoAggregateFunction.class)
                 .getFunctions();
     }
 }
