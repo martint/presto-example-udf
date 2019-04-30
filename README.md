@@ -1,6 +1,6 @@
 # presto-example-udf
 
-An example implentantion of Presto UDF functions - see https://prestodb.io/docs/current/develop/functions.html. 
+An example implentantion of Presto UDF functions - see https://prestosql.io/docs/current/develop/functions.html. 
 
 This project provides examples of scalar and aggregation function. 
 
